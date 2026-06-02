@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-<meta name="theme-color" content="#0a0e1a">
+<meta name="theme-color" content="#FAF7F0">
 <title>㈜대성건축사사무소 ▎김만민 건축사</title>
 
 <!-- ═══════════════════════════════════════════════════════════════════════════
@@ -55,17 +55,16 @@
 
 <style>
   :root {
-    --bg: #0a0e1a;
-    --bg-elev: #111726;
-    --bg-elev-2: #1a2338;
-    --line: #1f2a44;
-    --line-strong: #2a3a5c;
-    --text: #eef2fb;
-    --text-dim: #a0adc8;
-    --text-muted: #6b7796;
-    --accent: #4a7fd8;
-    --accent-glow: #6b9eff;
-    --gold: #c8a572;
+    --bg: #FAF7F0;              /* 웜 아이보리 배경 */
+    --bg-elev: #FFFFFF;          /* 카드 배경 (순백) */
+    --bg-elev-2: #F5F0E5;        /* 호버/액티브 (살짝 진한 크림) */
+    --line: #E8E0D0;             /* 기본 라인 (웜 베이지) */
+    --line-strong: #D4C8B0;      /* 강한 라인 (브론즈 베이지) */
+    --text: #1C2A50;             /* 메인 텍스트 (만민 딥네이비) */
+    --text-dim: #4A5573;         /* 보조 텍스트 (네이비 그레이) */
+    --text-muted: #8A7E68;       /* 약한 텍스트 (브론즈 그레이) */
+    --accent: #1C2A50;           /* 액센트 (딥네이비) */
+    --gold: #C8A951;             /* 골드 (만민 골드) */
   }
 
   * { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
@@ -86,16 +85,16 @@
     pointer-events: none;
     z-index: 0;
     background:
-      radial-gradient(circle at 15% 8%, rgba(74, 127, 216, 0.13), transparent 45%),
-      radial-gradient(circle at 85% 92%, rgba(200, 165, 114, 0.07), transparent 40%);
+      radial-gradient(circle at 15% 8%, rgba(200, 169, 81, 0.10), transparent 45%),
+      radial-gradient(circle at 85% 92%, rgba(28, 42, 80, 0.05), transparent 40%);
   }
   .bg-decor::before {
     content: '';
     position: absolute;
     inset: 0;
     background-image:
-      linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
-      linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+      linear-gradient(rgba(28, 42, 80, 0.04) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(28, 42, 80, 0.04) 1px, transparent 1px);
     background-size: 48px 48px;
     mask-image: radial-gradient(ellipse 70% 50% at 50% 30%, #000 0%, transparent 80%);
   }
@@ -121,7 +120,7 @@
     bottom: -1px; left: 50%;
     transform: translateX(-50%);
     width: 64px; height: 1px;
-    background: var(--accent);
+    background: var(--gold);
   }
   .brand-mark {
     display: flex;
@@ -133,7 +132,7 @@
     width: 130px;
     height: auto;
     margin-bottom: 14px;
-    filter: drop-shadow(0 4px 18px rgba(74,127,216,0.25));
+    filter: drop-shadow(0 4px 18px rgba(28, 42, 80, 0.20));
     opacity: 0.96;
   }
   .brand-name {
@@ -157,17 +156,18 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
     letter-spacing: 3px;
-    color: var(--accent-glow);
+    color: var(--gold);
     text-transform: uppercase;
     margin-bottom: 14px;
-    opacity: 0.85;
+    opacity: 0.95;
+    font-weight: 500;
   }
   .name-ko {
     font-size: 44px;
     font-weight: 900;
     letter-spacing: 8px;
     margin-bottom: 6px;
-    background: linear-gradient(180deg, #fff 0%, #c0cce8 100%);
+    background: linear-gradient(180deg, #1C2A50 0%, #3D4F7A 100%);
     -webkit-background-clip: text;
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -231,15 +231,16 @@
     transition: all 0.2s ease;
     cursor: pointer;
     font-family: inherit;
+    box-shadow: 0 2px 8px rgba(28, 42, 80, 0.04);
   }
   .act-btn:active {
     transform: scale(0.96);
     background: var(--bg-elev-2);
-    border-color: var(--accent);
+    border-color: var(--gold);
   }
   .act-btn svg {
     width: 22px; height: 22px;
-    stroke: var(--accent-glow);
+    stroke: var(--accent);
     stroke-width: 1.6;
     fill: none;
     margin-bottom: 6px;
@@ -264,8 +265,9 @@
   .section-label .num {
     font-family: 'JetBrains Mono', monospace;
     font-size: 10px;
-    color: var(--accent);
+    color: var(--gold);
     letter-spacing: 1px;
+    font-weight: 600;
   }
   .section-label .title {
     font-size: 11px;
@@ -286,6 +288,7 @@
     border: 1px solid var(--line);
     border-radius: 12px;
     overflow: hidden;
+    box-shadow: 0 2px 12px rgba(28, 42, 80, 0.05);
   }
   .contact-row {
     display: flex;
@@ -304,13 +307,13 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    background: var(--bg-elev-2);
+    background: rgba(28, 42, 80, 0.05);
     border-radius: 8px;
     flex-shrink: 0;
   }
   .contact-row .ico svg {
     width: 16px; height: 16px;
-    stroke: var(--accent-glow);
+    stroke: var(--accent);
     stroke-width: 1.6;
     fill: none;
   }
@@ -354,17 +357,18 @@
     position: relative;
     overflow: hidden;
     transition: all 0.2s ease;
+    box-shadow: 0 2px 12px rgba(28, 42, 80, 0.05);
   }
   .platform-card::before {
     content: '';
     position: absolute;
     inset: 0;
-    background: linear-gradient(135deg, rgba(74,127,216,0.08) 0%, transparent 60%);
+    background: linear-gradient(135deg, rgba(200, 169, 81, 0.10) 0%, transparent 60%);
     opacity: 0;
     transition: opacity 0.3s ease;
   }
   .platform-card:active::before { opacity: 1; }
-  .platform-card:active { border-color: var(--accent); }
+  .platform-card:active { border-color: var(--gold); }
 
   .platform-card .head {
     display: flex;
@@ -376,11 +380,12 @@
     font-family: 'JetBrains Mono', monospace;
     font-size: 9px;
     letter-spacing: 1.5px;
-    color: var(--accent-glow);
+    color: var(--gold);
     text-transform: uppercase;
     border: 1px solid var(--line-strong);
     padding: 3px 8px;
     border-radius: 100px;
+    font-weight: 600;
   }
   .platform-card .arrow {
     color: var(--text-muted);
@@ -418,6 +423,7 @@
     border: 1px solid var(--line);
     border-radius: 10px;
     text-align: center;
+    box-shadow: 0 2px 8px rgba(28, 42, 80, 0.04);
   }
   .exp-tag .label {
     font-size: 10px;
@@ -433,10 +439,13 @@
     color: var(--text);
   }
   .exp-tag.featured {
-    background: linear-gradient(135deg, rgba(200,165,114,0.12), rgba(74,127,216,0.06));
+    background: linear-gradient(135deg, rgba(200, 169, 81, 0.18), rgba(28, 42, 80, 0.06));
     border-color: var(--gold);
   }
   .exp-tag.featured .grade {
+    color: var(--text);
+  }
+  .exp-tag.featured .label {
     color: var(--gold);
   }
 
@@ -446,6 +455,7 @@
     border: 1px solid var(--line);
     border-radius: 12px;
     padding: 4px 0;
+    box-shadow: 0 2px 12px rgba(28, 42, 80, 0.05);
   }
   .license-row {
     padding: 10px 16px;
@@ -476,6 +486,7 @@
     border-radius: 12px;
     padding: 24px;
     text-align: center;
+    box-shadow: 0 2px 12px rgba(28, 42, 80, 0.05);
   }
   .qr-canvas {
     background: #fff;
@@ -772,7 +783,7 @@
         width: 160,
         margin: 0,
         color: {
-          dark: '#0a0e1a',
+          dark: '#1C2A50',
           light: '#ffffff'
         },
         errorCorrectionLevel: 'M'
