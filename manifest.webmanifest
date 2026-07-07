@@ -1,0 +1,19 @@
+{
+  "name": "㈜대성건축사사무소 · 김만민 건축사",
+  "short_name": "김만민 건축사",
+  "description": "㈜대성건축사사무소 김만민 건축사 디지털 명함 — 건축설계·인테리어, 설계·사업관리(CM), 소방시설설계업, 안전진단 전문기관, 엔지니어링업, 설계 VE & 시공 VE",
+  "lang": "ko-KR",
+  "dir": "ltr",
+  "start_url": "/name-card/",
+  "scope": "/name-card/",
+  "id": "/name-card/",
+  "display": "standalone",
+  "orientation": "portrait",
+  "background_color": "#FAF7F0",
+  "theme_color": "#FAF7F0",
+  "icons": [
+    { "src": "icon-192.png", "sizes": "192x192", "type": "image/png", "purpose": "any" },
+    { "src": "icon-512.png", "sizes": "512x512", "type": "image/png", "purpose": "any" },
+    { "src": "icon-maskable-512.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+  ]
+}
