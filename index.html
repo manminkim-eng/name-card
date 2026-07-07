@@ -554,6 +554,13 @@
     .act-btn { padding: 12px 4px; }
   }
 </style>
+<link rel="manifest" href="manifest.webmanifest">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="default">
+<meta name="apple-mobile-web-app-title" content="김만민 건축사">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="application-name" content="김만민 건축사">
+<link rel="icon" href="favicon.ico" sizes="any">
 </head>
 <body>
 
@@ -834,5 +841,8 @@ END:VCARD`;
   });
 </script>
 
+<script>
+if('serviceWorker' in navigator){window.addEventListener('load',function(){navigator.serviceWorker.register('sw.js').catch(function(){});});}
+</script>
 </body>
 </html>
