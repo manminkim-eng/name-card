@@ -4,8 +4,10 @@
    v2   (2026-08-14) : 정적 재구성판 자산 반영 — 폰트·이미지 프리캐시 추가
    v2.1 (2026-08-14) : 프리캐시 내성 강화 — manmin-hub 방식 적용.
         addAll 은 원자적이라 자산 1건만 404여도 설치 전체가 실패한다.
-        실패 시 파일별 add 로 재시도해, 일부가 빠져도 SW 는 설치되게 한다. */
-const CACHE = 'namecard-v2.1';
+        실패 시 파일별 add 로 재시도해, 일부가 빠져도 SW 는 설치되게 한다.
+   v2.2 (2026-08-15) : ARCHITECT KIM MANMIN 마크를 인라인 SVG 로 전환 —
+        assets/img/mark-architect.jpg 프리캐시 항목 제거. */
+const CACHE = 'namecard-v2.2';
 const ASSETS = [
   './',
   './index.html',
@@ -17,8 +19,7 @@ const ASSETS = [
   './icon-512.png',
   './icon-maskable-512.png',
   './assets/fonts/manmin-fonts.css',
-  './assets/fonts/NotoSansKR-var.woff2',
-  './assets/img/mark-architect.jpg'
+  './assets/fonts/NotoSansKR-var.woff2'
 ];
 
 self.addEventListener('install', (e) => {
