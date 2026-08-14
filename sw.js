@@ -1,8 +1,11 @@
 /* ㈜대성건축사사무소 명함 PWA - 최소 서비스워커
    목적: 설치 가능(installable) 요건 충족 + 오프라인 기본 표시
    scope: /name-card/  (이 파일은 반드시 /name-card/sw.js 위치에 두어야 함)
-   v2 (2026-08-14) : 정적 재구성판 자산 반영 — 폰트·이미지 프리캐시 추가 */
-const CACHE = 'namecard-v2';
+   v2   (2026-08-14) : 정적 재구성판 자산 반영 — 폰트·이미지 프리캐시 추가
+   v2.1 (2026-08-14) : 프리캐시 내성 강화 — manmin-hub 방식 적용.
+        addAll 은 원자적이라 자산 1건만 404여도 설치 전체가 실패한다.
+        실패 시 파일별 add 로 재시도해, 일부가 빠져도 SW 는 설치되게 한다. */
+const CACHE = 'namecard-v2.1';
 const ASSETS = [
   './',
   './index.html',
@@ -20,7 +23,9 @@ const ASSETS = [
 
 self.addEventListener('install', (e) => {
   e.waitUntil(
-    caches.open(CACHE).then((c) => c.addAll(ASSETS)).then(() => self.skipWaiting())
+    caches.open(CACHE)
+      .then((c) => c.addAll(ASSETS).catch(() => Promise.all(ASSETS.map((u) => c.add(u).catch(() => null)))))
+      .then(() => self.skipWaiting())
   );
 });
 
