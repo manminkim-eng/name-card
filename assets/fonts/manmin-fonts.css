@@ -1,0 +1,21 @@
+/* ============================================================
+   MANMIN WAP 공통 폰트 팩 — name-card 판  v1.1  (2026-08-14)
+   ------------------------------------------------------------
+   작업지시서 11절 준수판.
+   · 11.2 절대원칙 — 패밀리명을 'Noto Sans KR Local' 로 분리 선언한다.
+     'Noto Sans KR' 로 선언하면 나중 선언인 로컬이 항상 이겨
+     Google Fonts 가 무용지물이 되고 428KB 를 매번 내려받는다.
+   · 폰트 스택 2순위에 두어 CDN 실패 시에만 대체된다.
+   · 이 페이지는 한글 본문만 쓰므로 NanumSquare Neo · KoPubWorld
+     Batang 은 싣지 않는다(불필요한 1.7MB 절감).
+   마스터 : 11.개발자료/73.폰트파일/_웹배포용_woff2/
+   ============================================================ */
+
+@font-face {
+  font-family: 'Noto Sans KR Local';
+  src: url('./NotoSansKR-var.woff2') format('woff2-variations'),
+       url('./NotoSansKR-var.woff2') format('woff2');
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
